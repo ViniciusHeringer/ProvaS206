@@ -41,9 +41,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}users?page=2",
+							"raw": "https://reqres.in/api/users?page=2",
+							"protocol": "https",
 							"host": [
-								"{{URL}}users"
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
 							],
 							"query": [
 								{
@@ -62,8 +68,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
+									"pm.test(\"Status code is 404 (NEGATIVO)\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -87,15 +93,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}users?page=2",
+							"raw": "https://reqres.in/api/",
+							"protocol": "https",
 							"host": [
-								"{{URL}}users"
+								"reqres",
+								"in"
 							],
-							"query": [
-								{
-									"key": "page",
-									"value": "2"
-								}
+							"path": [
+								"api",
+								""
 							]
 						}
 					},
@@ -117,7 +123,7 @@
 									"    pm.response.to.have.status(201);\r",
 									"});\r",
 									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"kiko\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"Daniel\");\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -130,7 +136,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"kiko\",\r\n    \"job\": \"professor\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Daniel Albino Mosca\",\r\n    \"job\": \"professor\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -138,9 +144,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}users",
+							"raw": "https://reqres.in/api/users",
+							"protocol": "https",
 							"host": [
-								"{{URL}}users"
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users"
 							]
 						}
 					},
@@ -162,7 +174,7 @@
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"schnoz\");\r",
+									"    pm.expect(pm.response.text()).to.include(\"salvador\");\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -175,7 +187,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"schnoz\",\r\n    \"job\": \"berserk character\"\r\n}",
+							"raw": "{\r\n    \"name\": \"salvador\",\r\n    \"job\": \"vault hunter\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -183,12 +195,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}users/1337",
+							"raw": "https://reqres.in/api/users/2054",
+							"protocol": "https",
 							"host": [
-								"{{URL}}users"
+								"reqres",
+								"in"
 							],
 							"path": [
-								"1337"
+								"api",
+								"users",
+								"2054"
 							]
 						}
 					},
@@ -214,12 +230,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}users/1337",
+							"raw": "https://reqres.in/api/users/2054",
+							"protocol": "https",
 							"host": [
-								"{{URL}}users"
+								"reqres",
+								"in"
 							],
 							"path": [
-								"1337"
+								"api",
+								"users",
+								"2054"
 							]
 						}
 					},
@@ -239,6 +259,9 @@
 								"exec": [
 									"pm.test(\"Status code is 200\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"QpwL5tke4Pnpja7X4\");\r",
 									"});"
 								],
 								"type": "text/javascript",
@@ -259,9 +282,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{URL}}register",
+							"raw": "https://reqres.in/api/register",
+							"protocol": "https",
 							"host": [
-								"{{URL}}register"
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"register"
 							]
 						}
 					},
